@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E. Sai Yakshith - Web Developer & Data Analyst</title>
+    <meta name="description" content="Portfolio of E. Sai Yakshith - Building elegant digital solutions that solve real-world problems">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <link rel="stylesheet" href="portfolio-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand" onclick="scrollToSection('hero')">
+                E. SAI YAKSHITH
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-links">
+                <a href="#about" onclick="scrollToSection('about')">About</a>
+                <a href="#projects" onclick="scrollToSection('projects')">Projects</a>
+                <a href="#skills" onclick="scrollToSection('skills')">Skills</a>
+                <a href="#experience" onclick="scrollToSection('experience')">Experience</a>
+                <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+                <button class="btn btn-glass btn-sm">Resume</button>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#about" onclick="scrollToSection('about')">About</a>
+            <a href="#projects" onclick="scrollToSection('projects')">Projects</a>
+            <a href="#skills" onclick="scrollToSection('skills')">Skills</a>
+            <a href="#experience" onclick="scrollToSection('experience')">Experience</a>
+            <a href="#contact" onclick="scrollToSection('contact')">Contact</a>
+            <button class="btn btn-glass btn-sm">Resume</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg"></div>
+        
+        <!-- Animated Background Elements -->
+        <div class="bg-elements">
+            <div class="bg-blob bg-blob-1"></div>
+            <div class="bg-blob bg-blob-2"></div>
+            <div class="bg-blob bg-blob-3"></div>
+        </div>
+        
+        <!-- Floating Shapes -->
+        <div class="floating-shapes">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+            <div class="floating-shape shape-4"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-welcome">
+                    Hi, I'm Yakshith – blending creativity with code to shape intelligent systems.
+                </p>
+                
+                <h1 class="hero-title">
+                    <span class="gradient-text">E. SAI</span><br>
+                    <span class="hero-name">YAKSHITH</span>
+                </h1>
+                
+                <p class="hero-tagline">
+                    Building elegant digital solutions that solve 
+                    <span class="gradient-text">real-world problems</span>
+                </p>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-hero">
+                        <i data-lucide="download"></i>
+                        View My Resume
+                    </button>
+                    <button class="btn btn-glass btn-hero" onclick="scrollToSection('contact')">
+                        <i data-lucide="mail"></i>
+                        Get in Touch
+                    </button>
+                </div>
+                
+                <div class="scroll-indicator" onclick="scrollToSection('about')">
+                    <p>Discover More</p>
+                    <i data-lucide="arrow-down" class="scroll-arrow"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-bg">
+            <div class="bg-pattern bg-pattern-1"></div>
+            <div class="bg-pattern bg-pattern-2"></div>
+        </div>
+        
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="glass-card">
+                        <p class="about-paragraph">
+                            I'm <span class="gradient-text">E. Sai Yakshith</span>, a Web Developer and Data Analyst who loves turning ideas into smart digital solutions.
+                        </p>
+                        <p class="about-paragraph">
+                            With a strong foundation in full-stack development and a deep interest in data-driven systems, I create experiences that are both functional and futuristic.
+                        </p>
+                        <p class="about-paragraph">
+                            My passion lies in bridging the gap between <span class="text-primary">creative design</span> and <span class="text-secondary">intelligent technology</span>, delivering solutions that make a real impact.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="about-highlights">
+                    <div class="highlight-card highlight-primary">
+                        <div class="highlight-icon">
+                            <i data-lucide="code"></i>
+                        </div>
+                        <h3>Full-Stack Development</h3>
+                        <p>Building end-to-end web applications with modern technologies and best practices.</p>
+                    </div>
+                    
+                    <div class="highlight-card highlight-secondary">
+                        <div class="highlight-icon">
+                            <i data-lucide="database"></i>
+                        </div>
+                        <h3>Data Analysis</h3>
+                        <p>Transforming raw data into actionable insights through advanced analytics and visualization.</p>
+                    </div>
+                    
+                    <div class="highlight-card highlight-accent">
+                        <div class="highlight-icon">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <h3>AI Integration</h3>
+                        <p>Incorporating machine learning and AI technologies to create intelligent systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="section-bg">
+            <div class="bg-blob project-blob-1"></div>
+            <div class="bg-blob project-blob-2"></div>
+        </div>
+        
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Showcasing innovative solutions that blend creativity with cutting-edge technology</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1559028006-448665bd7c7f?w=800&h=600&fit=crop&crop=center" alt="Sign Language Detection">
+                        <div class="project-overlay"></div>
+                        <span class="project-type">Machine Learning</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sign Language Detection</h3>
+                        <p>A machine learning-based solution that interprets sign language gestures into text for improved accessibility.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>OpenCV</span>
+                            <span>React</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn btn-neon btn-sm">
+                                <i data-lucide="external-link"></i>
+                                View Project
+                            </button>
+                            <button class="btn btn-glass btn-icon">
+                                <i data-lucide="github"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop&crop=center" alt="Vehicle Tracking">
+                        <div class="project-overlay"></div>
+                        <span class="project-type">AI System</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Advanced AI Solutions for Real-Time Stolen Vehicle Tracking</h3>
+                        <p>An AI-powered tracking system that assists in locating stolen vehicles using real-time surveillance data.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>AI/ML</span>
+                            <span>Real-time Processing</span>
+                            <span>Computer Vision</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn btn-neon btn-sm">
+                                <i data-lucide="external-link"></i>
+                                View Project
+                            </button>
+                            <button class="btn btn-glass btn-icon">
+                                <i data-lucide="github"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop&crop=center" alt="Payroll System">
+                        <div class="project-overlay"></div>
+                        <span class="project-type">Full-Stack</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Employee Payroll System</h3>
+                        <p>A full-stack system to manage employee payrolls with user authentication and dynamic reporting.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Authentication</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn btn-neon btn-sm">
+                                <i data-lucide="external-link"></i>
+                                View Project
+                            </button>
+                            <button class="btn btn-glass btn-icon">
+                                <i data-lucide="github"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-footer">
+                <button class="btn btn-outline btn-lg">
+                    View All Projects
+                    <i data-lucide="external-link"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="section-bg">
+            <div class="bg-blob skill-blob-1"></div>
+            <div class="bg-blob skill-blob-2"></div>
+            <div class="bg-blob skill-blob-3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">A comprehensive toolkit for building modern, intelligent applications</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category skill-primary">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i data-lucide="code"></i>
+                        </div>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">Java</div>
+                        <div class="skill-item">HTML</div>
+                        <div class="skill-item">CSS</div>
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">SQL</div>
+                    </div>
+                    <div class="skill-count">
+                        <span class="count">6</span> Technologies
+                    </div>
+                </div>
+                
+                <div class="skill-category skill-secondary">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i data-lucide="layers"></i>
+                        </div>
+                        <h3>Frameworks & Libraries</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">React</div>
+                        <div class="skill-item">Node.js</div>
+                        <div class="skill-item">MongoDB</div>
+                    </div>
+                    <div class="skill-count">
+                        <span class="count">3</span> Technologies
+                    </div>
+                </div>
+                
+                <div class="skill-category skill-accent">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i data-lucide="bar-chart-3"></i>
+                        </div>
+                        <h3>Data & Tools</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">Power BI</div>
+                    </div>
+                    <div class="skill-count">
+                        <span class="count">1</span> Technology
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="section-bg">
+            <div class="bg-blob exp-blob-1"></div>
+            <div class="bg-blob exp-blob-2"></div>
+        </div>
+        
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience & <span class="gradient-text">Achievements</span></h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <div>
+                            <h3>Professional Experience</h3>
+                            <p class="text-primary">Leadership & Technical Coordination</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">
+                                <i data-lucide="calendar"></i>
+                                Recent
+                            </div>
+                            <h4>Technical Coordinator</h4>
+                            <p class="position-title">Android App Development Workshop</p>
+                            <p class="organization">Conducted by Neuron Club AI, Jain University</p>
+                            <p class="description">
+                                Led technical coordination for comprehensive Android development workshop, 
+                                facilitating knowledge transfer and hands-on learning experiences for participants.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="experience-side">
+                    <div class="cert-card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i data-lucide="award"></i>
+                            </div>
+                            <div>
+                                <h3>Certifications</h3>
+                                <p class="text-secondary">Professional Development</p>
+                            </div>
+                        </div>
+                        
+                        <div class="cert-list">
+                            <div class="cert-item">
+                                <div>
+                                    <h4>Machine Learning Fundamentals</h4>
+                                    <p>Advanced AI Concepts</p>
+                                </div>
+                                <span class="cert-status upcoming">Upcoming</span>
+                            </div>
+                            <div class="cert-item">
+                                <div>
+                                    <h4>Full-Stack Development</h4>
+                                    <p>Modern Web Technologies</p>
+                                </div>
+                                <span class="cert-status upcoming">Upcoming</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="edu-card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i data-lucide="graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h3>Education</h3>
+                                <p class="text-accent">Academic Foundation</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h4>Bachelor's Degree</h4>
+                                <p class="position-title">Computer Science & Engineering</p>
+                                <p class="organization">Jain University (Expected Graduation)</p>
+                                <p class="description">
+                                    Pursuing comprehensive education in computer science with focus on 
+                                    software engineering, data structures, and emerging technologies.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-bg">
+            <div class="bg-blob contact-blob-1"></div>
+            <div class="bg-blob contact-blob-2"></div>
+            <div class="bg-blob contact-blob-3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Ready to bring your ideas to life? Let's discuss how we can work together to create something amazing.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-form-container">
+                    <div class="glass-card">
+                        <h3>Send me a message</h3>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-neon btn-lg btn-full">
+                                <i data-lucide="send"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3>Get in Touch</h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div>
+                                <p class="contact-label">Email</p>
+                                <p class="contact-value">yakshith@example.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <p class="contact-label">Location</p>
+                                <p class="contact-value">India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i data-lucide="linkedin"></i>
+                            </div>
+                            <div>
+                                <p class="contact-label">LinkedIn</p>
+                                <a href="https://www.linkedin.com/in/yakshithetikala" target="_blank" class="contact-value contact-link">
+                                    yakshithetikala
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="resume-card">
+                        <div class="resume-icon">
+                            <i data-lucide="download"></i>
+                        </div>
+                        <h3>Download Resume</h3>
+                        <p>Get a comprehensive overview of my skills, experience, and projects.</p>
+                        <button class="btn btn-hero btn-lg btn-full">
+                            <i data-lucide="download"></i>
+                            Download PDF
+                        </button>
+                    </div>
+                    
+                    <div class="connect-card">
+                        <p>Looking for collaboration opportunities?</p>
+                        <button class="btn btn-glass btn-lg btn-full pulse-glow">
+                            Let's Connect!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 class="gradient-text">E. SAI YAKSHITH</h3>
+                    <p>Building elegant digital solutions that solve real-world problems through innovative technology and creative design.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/yakshithetikala" target="_blank">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="mailto:yakshith@example.com">
+                            <i data-lucide="mail"></i>
+                        </a>
+                        <a href="#">
+                            <i data-lucide="github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Made with <i data-lucide="heart" style="color: #ef4444;"></i> by E. Sai Yakshith</p>
+                <p>© 2024 E. Sai Yakshith. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <i data-lucide="check-circle"></i>
+            <div>
+                <div class="toast-title">Message Sent!</div>
+                <div class="toast-description">Thank you for reaching out. I'll get back to you soon!</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="portfolio-script.js"></script>
+</body>
+</html>
