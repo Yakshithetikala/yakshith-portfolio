@@ -1,29 +1,22 @@
 import { useEffect, useRef } from "react";
 import { Award, GraduationCap, Users, Calendar } from "lucide-react";
-
 const ExperienceSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
     const elements = sectionRef.current?.querySelectorAll('.scroll-animate');
-    elements?.forEach((el) => observer.observe(el));
-
+    elements?.forEach(el => observer.observe(el));
     return () => observer.disconnect();
   }, []);
-
-  return (
-    <section id="experience" ref={sectionRef} className="py-20 lg:py-32 bg-background relative overflow-hidden">
+  return <section id="experience" ref={sectionRef} className="py-20 lg:py-32 bg-background relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/3 right-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
@@ -136,9 +129,7 @@ const ExperienceSection = () => {
                     <p className="text-accent font-medium mb-2">
                       Computer Science & Engineering
                     </p>
-                    <p className="text-muted-foreground mb-3">
-                      Jain University (Expected Graduation)
-                    </p>
+                    <p className="text-muted-foreground mb-3">Jain University  2022-26</p>
                     <p className="text-foreground/90 leading-relaxed">
                       Pursuing comprehensive education in computer science with focus on 
                       software engineering, data structures, and emerging technologies.
@@ -150,8 +141,6 @@ const ExperienceSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ExperienceSection;
