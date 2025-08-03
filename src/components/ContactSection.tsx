@@ -5,50 +5,53 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, MapPin, Linkedin, Send, Download } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: ""
   });
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
   const sectionRef = useRef<HTMLElement>(null);
+
   useEffect(() => {
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in-view");
-        }
-      });
-    }, {
-      threshold: 0.3
-    });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
     const elements = sectionRef.current?.querySelectorAll('.scroll-animate');
-    elements?.forEach(el => observer.observe(el));
+    elements?.forEach((el) => observer.observe(el));
+
     return () => observer.disconnect();
   }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
     toast({
       title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!"
+      description: "Thank you for reaching out. I'll get back to you soon!",
     });
-    setFormData({
-      name: "",
-      email: "",
-      message: ""
-    });
+    setFormData({ name: "", email: "", message: "" });
   };
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-  return <section id="contact" ref={sectionRef} className="py-20 lg:py-32 bg-background-secondary relative overflow-hidden">
+
+  return (
+    <section id="contact" ref={sectionRef} className="py-20 lg:py-32 bg-background-secondary relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
@@ -79,15 +82,39 @@ const ContactSection = () => {
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <Input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleInputChange} required className="bg-background/50 border-white/20 focus:border-primary/50 rounded-lg h-12" />
+                    <Input
+                      type="text"
+                      name="name"
+                      placeholder="Your Name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      className="bg-background/50 border-white/20 focus:border-primary/50 rounded-lg h-12"
+                    />
                   </div>
                   
                   <div>
-                    <Input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleInputChange} required className="bg-background/50 border-white/20 focus:border-primary/50 rounded-lg h-12" />
+                    <Input
+                      type="email"
+                      name="email"
+                      placeholder="Your Email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="bg-background/50 border-white/20 focus:border-primary/50 rounded-lg h-12"
+                    />
                   </div>
                   
                   <div>
-                    <Textarea name="message" placeholder="Your Message" value={formData.message} onChange={handleInputChange} required rows={6} className="bg-background/50 border-white/20 focus:border-primary/50 rounded-lg resize-none" />
+                    <Textarea
+                      name="message"
+                      placeholder="Your Message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
+                      rows={6}
+                      className="bg-background/50 border-white/20 focus:border-primary/50 rounded-lg resize-none"
+                    />
                   </div>
                   
                   <Button type="submit" variant="neon" size="lg" className="w-full group">
@@ -134,7 +161,12 @@ const ContactSection = () => {
                       </div>
                       <div>
                         <p className="text-muted-foreground text-sm">LinkedIn</p>
-                        <a href="https://www.linkedin.com/in/yakshithetikala" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors duration-300">
+                        <a 
+                          href="https://www.linkedin.com/in/yakshithetikala" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-foreground font-medium hover:text-accent transition-colors duration-300"
+                        >
                           yakshithetikala
                         </a>
                       </div>
@@ -168,12 +200,21 @@ const ContactSection = () => {
 
               {/* Floating Action */}
               <div className="scroll-animate">
-                
+                <div className="glass p-6 rounded-2xl border border-white/10 text-center">
+                  <p className="text-muted-foreground mb-4">
+                    Looking for collaboration opportunities?
+                  </p>
+                  <Button variant="glass" size="lg" className="w-full pulse-glow">
+                    Let's Connect!
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ContactSection;
